@@ -17,9 +17,13 @@
 		FB84178521D7D64900ECFA2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB84178321D7D64900ECFA2F /* LaunchScreen.storyboard */; };
 		FB84178E21D7E6BD00ECFA2F /* explosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FB84178C21D7E6BD00ECFA2F /* explosion.mp3 */; };
 		FB84178F21D7E6BD00ECFA2F /* torpedo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FB84178D21D7E6BD00ECFA2F /* torpedo.mp3 */; };
-		FB84179321D7EEC200ECFA2F /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = FB84179221D7EEC200ECFA2F /* spark.png */; };
-		FB84179A21D7EF2700ECFA2F /* Starfield.sks in Resources */ = {isa = PBXBuildFile; fileRef = FB84179821D7EF2700ECFA2F /* Starfield.sks */; };
-		FB84179B21D7EF2700ECFA2F /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = FB84179921D7EF2700ECFA2F /* Explosion.sks */; };
+		FB8417A021D81B1C00ECFA2F /* ManuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = FB84179F21D81B1C00ECFA2F /* ManuScene.sks */; };
+		FB8417A421D81DB400ECFA2F /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = FB8417A321D81DB400ECFA2F /* Explosion.sks */; };
+		FB8417A621D81DB900ECFA2F /* Starfield.sks in Resources */ = {isa = PBXBuildFile; fileRef = FB8417A521D81DB900ECFA2F /* Starfield.sks */; };
+		FB8417A821D81DC200ECFA2F /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = FB8417A721D81DC200ECFA2F /* spark.png */; };
+		FB8417AA21D81E8400ECFA2F /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8417A921D81E8400ECFA2F /* MenuScene.swift */; };
+		FB8417AC21D8254E00ECFA2F /* newgame.png in Resources */ = {isa = PBXBuildFile; fileRef = FB8417AB21D8254E00ECFA2F /* newgame.png */; };
+		FB8417AE21D8255100ECFA2F /* difficulty.png in Resources */ = {isa = PBXBuildFile; fileRef = FB8417AD21D8255100ECFA2F /* difficulty.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,9 +39,13 @@
 		FB84178621D7D64900ECFA2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB84178C21D7E6BD00ECFA2F /* explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explosion.mp3; sourceTree = "<group>"; };
 		FB84178D21D7E6BD00ECFA2F /* torpedo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = torpedo.mp3; sourceTree = "<group>"; };
-		FB84179221D7EEC200ECFA2F /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
-		FB84179821D7EF2700ECFA2F /* Starfield.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Starfield.sks; sourceTree = "<group>"; };
-		FB84179921D7EF2700ECFA2F /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Explosion.sks; sourceTree = "<group>"; };
+		FB84179F21D81B1C00ECFA2F /* ManuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ManuScene.sks; sourceTree = "<group>"; };
+		FB8417A321D81DB400ECFA2F /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Explosion.sks; sourceTree = "<group>"; };
+		FB8417A521D81DB900ECFA2F /* Starfield.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Starfield.sks; sourceTree = "<group>"; };
+		FB8417A721D81DC200ECFA2F /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		FB8417A921D81E8400ECFA2F /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
+		FB8417AB21D8254E00ECFA2F /* newgame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newgame.png; sourceTree = "<group>"; };
+		FB8417AD21D8255100ECFA2F /* difficulty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = difficulty.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,22 +78,42 @@
 		FB84177321D7D64700ECFA2F /* iTrip Game */ = {
 			isa = PBXGroup;
 			children = (
+				FB8417A721D81DC200ECFA2F /* spark.png */,
+				FB8417A521D81DB900ECFA2F /* Starfield.sks */,
+				FB8417A321D81DB400ECFA2F /* Explosion.sks */,
 				FB84177421D7D64700ECFA2F /* AppDelegate.swift */,
-				FB84177621D7D64700ECFA2F /* GameScene.sks */,
-				FB84177821D7D64700ECFA2F /* Actions.sks */,
-				FB84179921D7EF2700ECFA2F /* Explosion.sks */,
-				FB84179821D7EF2700ECFA2F /* Starfield.sks */,
-				FB84179221D7EEC200ECFA2F /* spark.png */,
-				FB84177A21D7D64700ECFA2F /* GameScene.swift */,
 				FB84177C21D7D64700ECFA2F /* GameViewController.swift */,
+				FB84177821D7D64700ECFA2F /* Actions.sks */,
 				FB84177E21D7D64700ECFA2F /* Main.storyboard */,
-				FB84178C21D7E6BD00ECFA2F /* explosion.mp3 */,
-				FB84178D21D7E6BD00ECFA2F /* torpedo.mp3 */,
+				FB84179F21D81B1C00ECFA2F /* ManuScene.sks */,
+				FB8417A921D81E8400ECFA2F /* MenuScene.swift */,
+				FB8417AB21D8254E00ECFA2F /* newgame.png */,
+				FB8417AD21D8255100ECFA2F /* difficulty.png */,
+				FB84179C21D81A1900ECFA2F /* Game */,
+				FB84179E21D81A9700ECFA2F /* Sounds */,
 				FB84178121D7D64900ECFA2F /* Assets.xcassets */,
 				FB84178321D7D64900ECFA2F /* LaunchScreen.storyboard */,
 				FB84178621D7D64900ECFA2F /* Info.plist */,
 			);
 			path = "iTrip Game";
+			sourceTree = "<group>";
+		};
+		FB84179C21D81A1900ECFA2F /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				FB84177621D7D64700ECFA2F /* GameScene.sks */,
+				FB84177A21D7D64700ECFA2F /* GameScene.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		FB84179E21D81A9700ECFA2F /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				FB84178C21D7E6BD00ECFA2F /* explosion.mp3 */,
+				FB84178D21D7E6BD00ECFA2F /* torpedo.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,16 +174,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB8417A821D81DC200ECFA2F /* spark.png in Resources */,
 				FB84178F21D7E6BD00ECFA2F /* torpedo.mp3 in Resources */,
-				FB84179321D7EEC200ECFA2F /* spark.png in Resources */,
+				FB8417AC21D8254E00ECFA2F /* newgame.png in Resources */,
 				FB84178E21D7E6BD00ECFA2F /* explosion.mp3 in Resources */,
+				FB8417A621D81DB900ECFA2F /* Starfield.sks in Resources */,
 				FB84178021D7D64700ECFA2F /* Main.storyboard in Resources */,
 				FB84177721D7D64700ECFA2F /* GameScene.sks in Resources */,
 				FB84178221D7D64900ECFA2F /* Assets.xcassets in Resources */,
-				FB84179A21D7EF2700ECFA2F /* Starfield.sks in Resources */,
-				FB84179B21D7EF2700ECFA2F /* Explosion.sks in Resources */,
+				FB8417A021D81B1C00ECFA2F /* ManuScene.sks in Resources */,
 				FB84178521D7D64900ECFA2F /* LaunchScreen.storyboard in Resources */,
+				FB8417AE21D8255100ECFA2F /* difficulty.png in Resources */,
 				FB84177921D7D64700ECFA2F /* Actions.sks in Resources */,
+				FB8417A421D81DB400ECFA2F /* Explosion.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB84177B21D7D64700ECFA2F /* GameScene.swift in Sources */,
+				FB8417AA21D81E8400ECFA2F /* MenuScene.swift in Sources */,
 				FB84177D21D7D64700ECFA2F /* GameViewController.swift in Sources */,
 				FB84177521D7D64700ECFA2F /* AppDelegate.swift in Sources */,
 			);
