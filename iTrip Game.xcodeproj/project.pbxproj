@@ -15,6 +15,11 @@
 		FB84178021D7D64700ECFA2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB84177E21D7D64700ECFA2F /* Main.storyboard */; };
 		FB84178221D7D64900ECFA2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB84178121D7D64900ECFA2F /* Assets.xcassets */; };
 		FB84178521D7D64900ECFA2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB84178321D7D64900ECFA2F /* LaunchScreen.storyboard */; };
+		FB84178E21D7E6BD00ECFA2F /* explosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FB84178C21D7E6BD00ECFA2F /* explosion.mp3 */; };
+		FB84178F21D7E6BD00ECFA2F /* torpedo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FB84178D21D7E6BD00ECFA2F /* torpedo.mp3 */; };
+		FB84179321D7EEC200ECFA2F /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = FB84179221D7EEC200ECFA2F /* spark.png */; };
+		FB84179A21D7EF2700ECFA2F /* Starfield.sks in Resources */ = {isa = PBXBuildFile; fileRef = FB84179821D7EF2700ECFA2F /* Starfield.sks */; };
+		FB84179B21D7EF2700ECFA2F /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = FB84179921D7EF2700ECFA2F /* Explosion.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		FB84178121D7D64900ECFA2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB84178421D7D64900ECFA2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB84178621D7D64900ECFA2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB84178C21D7E6BD00ECFA2F /* explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explosion.mp3; sourceTree = "<group>"; };
+		FB84178D21D7E6BD00ECFA2F /* torpedo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = torpedo.mp3; sourceTree = "<group>"; };
+		FB84179221D7EEC200ECFA2F /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		FB84179821D7EF2700ECFA2F /* Starfield.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Starfield.sks; sourceTree = "<group>"; };
+		FB84179921D7EF2700ECFA2F /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Explosion.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,9 +73,14 @@
 				FB84177421D7D64700ECFA2F /* AppDelegate.swift */,
 				FB84177621D7D64700ECFA2F /* GameScene.sks */,
 				FB84177821D7D64700ECFA2F /* Actions.sks */,
+				FB84179921D7EF2700ECFA2F /* Explosion.sks */,
+				FB84179821D7EF2700ECFA2F /* Starfield.sks */,
+				FB84179221D7EEC200ECFA2F /* spark.png */,
 				FB84177A21D7D64700ECFA2F /* GameScene.swift */,
 				FB84177C21D7D64700ECFA2F /* GameViewController.swift */,
 				FB84177E21D7D64700ECFA2F /* Main.storyboard */,
+				FB84178C21D7E6BD00ECFA2F /* explosion.mp3 */,
+				FB84178D21D7E6BD00ECFA2F /* torpedo.mp3 */,
 				FB84178121D7D64900ECFA2F /* Assets.xcassets */,
 				FB84178321D7D64900ECFA2F /* LaunchScreen.storyboard */,
 				FB84178621D7D64900ECFA2F /* Info.plist */,
@@ -131,9 +146,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB84178F21D7E6BD00ECFA2F /* torpedo.mp3 in Resources */,
+				FB84179321D7EEC200ECFA2F /* spark.png in Resources */,
+				FB84178E21D7E6BD00ECFA2F /* explosion.mp3 in Resources */,
 				FB84178021D7D64700ECFA2F /* Main.storyboard in Resources */,
 				FB84177721D7D64700ECFA2F /* GameScene.sks in Resources */,
 				FB84178221D7D64900ECFA2F /* Assets.xcassets in Resources */,
+				FB84179A21D7EF2700ECFA2F /* Starfield.sks in Resources */,
+				FB84179B21D7EF2700ECFA2F /* Explosion.sks in Resources */,
 				FB84178521D7D64900ECFA2F /* LaunchScreen.storyboard in Resources */,
 				FB84177921D7D64700ECFA2F /* Actions.sks in Resources */,
 			);
