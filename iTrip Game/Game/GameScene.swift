@@ -32,6 +32,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let motionManger = CMMotionManager()
     var xAcceleration:CGFloat = 0
     
+    
+    
+    
+    
     override func didMove(to view: SKView) {
         self.anchorPoint = CGPoint(x:0, y:0)
         starfield = SKEmitterNode(fileNamed: "Starfield") //nazwa
