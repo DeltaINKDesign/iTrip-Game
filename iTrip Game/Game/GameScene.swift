@@ -33,10 +33,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var xAcceleration:CGFloat = 0
     
     
-    
+    var livesArray:[SKSpriteNode]!
     
     
     override func didMove(to view: SKView) {
+        
+        addLives()
         self.anchorPoint = CGPoint(x:0, y:0)
         starfield = SKEmitterNode(fileNamed: "Starfield") //nazwa
         starfield.position = CGPoint(x: self.frame.size.width/2, y: 1472)  //rozmiar dla iPhone 6s i 7
@@ -47,7 +49,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         player = SKSpriteNode(imageNamed: "player")
         
-        player.position = CGPoint(x: self.frame.size.width / 2, y: player.size.height / 2 + 10) //pozycja gracza
+        player.position = CGPoint(x: self.frame.size.width / 2, y: player.size.height / 2 + 20) //pozycja gracza
         
         self.addChild(player)
         
@@ -55,14 +57,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.physicsWorld.contactDelegate = self
         
         scoreLabel = SKLabelNode(text: "Score: 0")
-        scoreLabel.position = CGPoint(x: 100, y: self.frame.size.height - 60)
+        scoreLabel.position = CGPoint(x: 80, y: self.frame.size.height - 70)
         scoreLabel.fontName = "AmericanTypewriter-Bold"
-        scoreLabel.fontSize = 36
+        scoreLabel.fontSize = 28
         scoreLabel.fontColor = UIColor.white
         score = 0
         
         self.addChild(scoreLabel)
         
+        var timeInterval = 0.75
+        
+        if UserDefaults.standard.bool(forKey: "hard")
+        {
+            timeInterval = 0.3
+        }
         
         gameTimer = Timer.scheduledTimer(timeInterval: 0.75, target: self, selector: #selector(addAlien), userInfo: nil, repeats: true)
         
@@ -79,6 +87,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
     }
     
+    
+    func addLives(){
+        livesArray = [SKSpriteNode]()
+        
+        for live in 1 ... 3{
+            let liveNode = SKSpriteNode(imageNamed: "player")
+            liveNode.position = CGPoint(x: self.frame.size.width - CGFloat(4 - live) * liveNode.size.width, y: self.frame.size.height - 60)
+            self.addChild(liveNode)
+            livesArray.append(liveNode)
+        }
+    }
     
     
     @objc func addAlien () {
@@ -106,6 +125,25 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         
         actionArray.append(SKAction.move(to: CGPoint(x: position, y: -alien.size.height), duration: animationDuration))
+        //DZWIEK PRZEGRANEJ
+        actionArray.append(SKAction.run{
+            self.run(SKAction.playSoundFileNamed("explosion.mp3", waitForCompletion: false))
+            
+            if self.livesArray.count>0{
+                let liveNode = self.livesArray.first
+                liveNode!.removeFromParent()
+                self.livesArray.removeFirst()
+                
+                if self.livesArray.count == 0{
+                    //GAME OVER SCREEN
+                    let transition = SKTransition.flipHorizontal(withDuration: 0.5)
+                    let gameOver = SKScene(fileNamed: "GameOverScene") as! GameOverScene
+                    gameOver.score = self.score
+                    self.view?.presentScene(gameOver, transition: transition)
+                    
+                }
+            }
+            })
         actionArray.append(SKAction.removeFromParent())
         
         alien.run(SKAction.sequence(actionArray))
