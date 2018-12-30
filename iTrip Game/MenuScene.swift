@@ -17,15 +17,15 @@ class MenuScene: SKScene {
     var difficultyLabelNode:SKLabelNode!
     
     override func didMove(to view: SKView){
-        starfield = self.childNode(withName: "starfield") as! SKEmitterNode
+        starfield = (self.childNode(withName: "starfield") as! SKEmitterNode)
         starfield.advanceSimulationTime(10)
         
-        newGameButtonNode=self.childNode(withName: "newGameButton") as! SKSpriteNode
-        newGameButtonNode=self.childNode(withName: "difficultyButton") as! SKSpriteNode
+        newGameButtonNode=(self.childNode(withName: "newGameButton") as! SKSpriteNode)
+        difficultyButtonNode=(self.childNode(withName: "difficultyButton") as! SKSpriteNode)
         
         
         difficultyButtonNode.texture=SKTexture(imageNamed: "difficultyButton")
-        difficultyLabelNode=self.childNode(withName: "difficultyLabel") as! SKLabelNode
+        difficultyLabelNode=(self.childNode(withName: "difficultyLabel") as! SKLabelNode)
         
         
         let userDefaults = UserDefaults.standard
@@ -44,12 +44,11 @@ class MenuScene: SKScene {
             let nodesArray = self.nodes(at:location)
             
             if nodesArray.first?.name == "newGameButton"
-            {
+{
                 let transition = SKTransition.flipHorizontal(withDuration: 0.5)
                 let gameScene=GameScene(size: self.size)
                 self.view?.presentScene(gameScene,transition:transition)
-            }
-            else if nodesArray.first?.name == "difficultyButton"{
+            }else if nodesArray.first?.name == "difficultyButton"{
                 changeDifficulty()
             }
         }
